@@ -1,9 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{ values.name | test app }}
-  description: ${{ values.description | test app }}
+  name: ${{ values.name | dump }}
+  description: ${{ values.description | dump }}
+  tier: ${{ values.tier | dump }}
 spec:
   type: service
-  owner: ${{ values.owner | user:guest }}
+  owner: ${{ values.owner | dump }}
   lifecycle: experimental

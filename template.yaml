@@ -28,6 +28,13 @@ spec:
           description: Add a description to explain the component propouse
           ui:options:
             rows: 5
+        tier:
+          title: Tier
+          type: array
+          description: Tier of the service you are creating
+          items:
+            type: "number",
+            enum: [0,1,2,3,4],
         owner:
           title: Owner Team
           type: string
