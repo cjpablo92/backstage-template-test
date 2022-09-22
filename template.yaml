@@ -33,8 +33,8 @@ spec:
           type: array
           description: Tier of the service you are creating
           items:
-            type: "number",
-            enum: [0,1,2,3,4],
+            type: "number"
+            enum: [0, 1, 2, 3, 4]
         owner:
           title: Owner Team
           type: string
@@ -78,6 +78,7 @@ spec:
         allowedHosts: ['github.com']
         description: This is ${{ parameters.component_id }}
         repoUrl: ${{ parameters.repoUrl }}
+        # repoVisibility: public # or 'internal' or 'private'
 
     # The final step is to register our new component in the catalog.
     - id: register
